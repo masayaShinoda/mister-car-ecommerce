@@ -1,0 +1,40 @@
+@import "./variables";
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    // position: fixed;    
+    width: 100%;
+    padding: 2.5vmin 10vw;
+    top: 0;
+    z-index: 10;
+    border: 1px solid red; //debug
+    .logo {
+        max-width: 20vmin;
+    }
+    nav {
+        display: flex;
+        a {
+            font-size: 2.1rem;
+            margin: 0 .5rem;
+            line-height: .5;
+            text-decoration: none;
+            color: #212121;
+            transition: color .2s ease-in;
+        }
+        a:active, a:hover {color: $secondary-clr;}
+        a:after {
+            display: inline-block;
+            opacity: 0;
+            content: " ";
+            height: 2px;
+            width: 100%;
+            transition: 0.2s ease-in-out;
+            background: #212121;
+        }
+        a:hover::After {
+            opacity: 1;
+        }
+    }
+}
