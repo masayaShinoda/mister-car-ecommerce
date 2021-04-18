@@ -19,3 +19,15 @@ p {
     font-weight: 400; 
     font-family: $body;
 }
+main {
+    padding: 0 10vw;
+    border: 1px solid purple; //debug
+}
+@media (max-width: $mobile-bp) {
+    main {
+        padding: 0 5vw;
+    }
+}
+img {
+    max-width: 100%;
+}

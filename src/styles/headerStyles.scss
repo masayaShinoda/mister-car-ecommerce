@@ -4,26 +4,31 @@ header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    background: #212121;
     // position: fixed;    
     width: 100%;
     padding: 2.5vmin 10vw;
+    padding-top: 4.25vmin;
     top: 0;
     z-index: 10;
-    border: 1px solid red; //debug
+    // border: 1px solid red; //debug
     .logo {
         max-width: 20vmin;
     }
-    nav {
+    .desktopNav, .mobileNav {
         display: flex;
+        align-items: center;
         a {
             font-size: 2.1rem;
-            margin: 0 .5rem;
-            line-height: .5;
+            margin: 0 1.1rem;
+            // line-height: .5;
+            line-height: 0;
             text-decoration: none;
-            color: #212121;
+            // color: #212121;
+            color: #fcfcfc;
             transition: color .2s ease-in;
         }
-        a:active, a:hover {color: $secondary-clr;}
+        a:active {color: $secondary-clr;}
         a:after {
             display: inline-block;
             opacity: 0;
@@ -31,10 +36,88 @@ header {
             height: 2px;
             width: 100%;
             transition: 0.2s ease-in-out;
-            background: #212121;
+            background: $secondary-clr;
+            // background: #212121;
+            // background: #fcfcfc;
         }
         a:hover::After {
             opacity: 1;
+        }
+    }
+    .mobileNav {display: none;}
+    //on desktop nav button hidden
+
+}
+//mobile nav
+@media (max-width: $mobile-bp) {
+    header {
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 2.5vh 5vw;
+        .desktopNav {display: none;}
+        .mobileNav {
+            display: none;
+            flex-direction: column;
+        }
+        .logoBtn {
+            display: none;
+        }
+        .openNavBtn, .closeNavBtn {   
+            
+            top: 2.5vh;
+            left: 10vw;
+            color: #fcfcfc;
+            font-size: 1.2rem;
+            width: 9.375vmax; 
+            height: 9.375vmax;
+            border-radius: 100%;
+            background: none;
+            border: 0;
+            box-shadow: 1px 2px 12px rgba(33, 33, 33, 0.5);
+            span {
+                display: block;
+                margin: 10% auto;
+                width: 3.75vmax;
+                height: 0.375vmax;
+                border-radius: 0.5vmax;
+                background: #fcfcfc;
+            }
+        }
+        .openNavBtn {
+            display: block;
+        }
+        .closeNavBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // border: 1px solid red; //debug
+            div {
+                // position: fixed;
+                // border: 1px solid blue; //debug
+                span {
+                    display: block;
+                    margin: 0 auto;
+                    transform:  rotate(45deg);                
+                }
+                span:nth-of-type(2n) {            
+                    background: #fcfcfc;
+                    transform: translateY(-0.25vmax) rotate(135deg);    
+                }
+            }
+        }
+        .mobileNav {
+            display: none;
+            position: absolute;
+            align-items: flex-start;
+            background: #212121;
+            top: 12.5vh;
+            a {
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 2.1rem 2.5vw;
+            }
+            
         }
     }
 }

@@ -13,7 +13,7 @@ html {
 }
 
 h1, h2, h3, a {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -40,6 +40,21 @@ a {
 p {
   font-size: 1.8rem;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Catamaran", sans-serif;
+}
+
+main {
+  padding: 0 10vw;
+  border: 1px solid purple;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 5vw;
+  }
+}
+
+img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
