@@ -60,6 +60,10 @@ header .desktopNav a:hover::After, header .mobileNav a:hover::After {
   opacity: 1;
 }
 
+header .openNavBtn, header .closeNavBtn {
+  display: none;
+}
+
 header .mobileNav {
   display: none;
 }
