@@ -1,0 +1,30 @@
+@import "./variables";
+
+.productContainer {
+
+}
+.productImg {
+    margin: 1.1rem 0;
+}
+.productPrice {
+    display: flex;
+    align-items: center;
+    p {
+        font-family: $head;
+        font-size: 2.4rem;
+    }
+}
+.productName {
+    font-size: 2.1rem;
+    // margin: 1.1rem 0;
+}
+img {
+    max-width: 20vw;
+}
+@media(max-width: $mobile-bp) {
+    img {
+        max-width: 65vw;
+        margin: 0 auto;
+
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,sIAAI;AACZ,OAAO,CAAC,oLAAI",
+    "sources": [
+        "storeStyles.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "storeStyles.css"
+}

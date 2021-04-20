@@ -8,6 +8,8 @@ import SEO from "../components/seo"
 import Checkout from "../components/checkout.js"
 import Products from "../components/products"
 
+import "../styles/storeStyles.css"
+
 let stripePromise
 const getStripe = () => {
   if (!stripePromise) {
@@ -18,11 +20,13 @@ const getStripe = () => {
 const StorePage = () => (
   <Layout>
     <SEO title="Store" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <h1>Store</h1>
+    
+    <div className="storeContainer">
+      <Products />
+
+    </div>
     {/* <Checkout /> */}
-    <Products />
   </Layout>
 )
 

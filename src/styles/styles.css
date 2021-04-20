@@ -14,15 +14,18 @@ html {
 
 h1, h2, h3, a {
   font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
 }
 
 h1 {
   font-weight: 800;
   font-size: 4.2rem;
+  margin-bottom: 1.1rem;
 }
 
 h2, h3 {
   font-weight: 600;
+  margin-bottom: .8rem;
 }
 
 h2 {
@@ -41,11 +44,11 @@ p {
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Catamaran", sans-serif;
+  line-height: 1.6;
 }
 
 main {
-  padding: 0 10vw;
-  border: 1px solid purple;
+  padding: 10vh 10vw;
 }
 
 @media (max-width: 480px) {

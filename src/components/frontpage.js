@@ -9,9 +9,8 @@ import "../styles/frontpageStyles.css"
 
 const Frontpage = () => (
   <div className="frontpageContainer">
-      <h1>Hi</h1>
-      <h2>Hi</h2>
-      <h3>Hi</h3>
+      <h1>Coming soon</h1>
+      <p>Site is under construction, stay tuned!</p>
   </div>
 )
 
