@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "mister-car-accessories",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Ecommerce site for Mister Car Accessories",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Masaya Shida <masayashida@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",

@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
       mode: "payment",
       lineItems: [{ price, quantity: 1 }],
       successUrl: `${window.location.origin}/store/`,
-      cancelUrl: `${window.location.origin}/advanced`,
+      cancelUrl: `${window.location.origin}/store/`,
     })
 
     if (error) {
