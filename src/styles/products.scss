@@ -1,8 +1,25 @@
 @import "./variables";
 
-.productContainer {
-
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    // border: 1px solid red;
 }
+.productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1.5rem;
+    margin-bottom: 4.25vh;
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+    background-color: #fff;
+    // border-radius: 2.5rem; 
+    max-width: 25vw;
+    // border: 1px solid blue; //debug
+}
+.productCard:nth-of-type(1n) {margin-right: 2.5vw}
 .productImg {
     margin: 1.1rem 0;
 }
@@ -15,10 +32,36 @@
     }
 }
 .productName {
-    font-size: 2.1rem;
+    font-size: 2.4rem;
     // margin: 1.1rem 0;
 }
+.priceSelectContainer {
+    display: flex;
+    margin-bottom: 1.1rem;
+    align-items: center;
+    p {
+        font-size: 1.6rem;
+        margin-right: .8rem;
+    }
+    select {
+        -webkit-appearance: button;
+        -webkit-border-radius: 2px;
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        -webkit-padding-end: 20px;
+        -webkit-padding-start: 2px;
+        -webkit-user-select: none;
+        border: 1px solid #AAA;
+        color: #212121;
+        font-size: 1.4rem;    
+        overflow: hidden;
+        padding: .5rem .25em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 10vw;
+     }
+}
 .disabledBuyBtn, .buyBtn {
+
     font-family: $head;
     // text-transform: uppercase;     
     font-weight: 600;
@@ -36,13 +79,37 @@
 .buyBtn:hover {background: lighten($primary-clr, 5%)}
 .disabledBuyBtn {background: darken($primary-clr, 40%)}
 
+.LazyLoad {min-width: 20vw; min-height: 10vw;}
 img {
     max-width: 20vw;
 }
-@media(max-width: $mobile-bp) {
+@media(max-width: $tablet-bp) {
+    .productsContainer {
+       
+    }
+    .productCard {
+        max-width: 40vw;
+    }
+    .productCard:nth-of-type(1n) {margin-right: 0} // cancel desktop margins
+    .productCard:nth-of-type(2n) {margin-left: 5vw} // cancel desktop margins
     img {
-        max-width: 65vw;
+        max-width: 32.5vw;
+    }
+}
+@media(max-width: $mobile-bp) {
+    .productCard {
+        min-width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+    .productCard:nth-of-type(2n) {margin-left: 0} // cancel tablet margins
+    .LazyLoad {min-width: 80vw; min-height: 50vw;}
+    select {min-width: 30vw}
+    img {
+        max-width: 80vw;
         margin: 0 auto;
 
     }
 }
+
+

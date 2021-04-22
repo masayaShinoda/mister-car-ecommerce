@@ -42,7 +42,7 @@ header .desktopNav a, header .mobileNav a {
 }
 
 header .desktopNav a:active, header .mobileNav a:active {
-  color: #e00025;
+  color: #00e0bb;
 }
 
 header .desktopNav a:after, header .mobileNav a:after {
@@ -53,7 +53,7 @@ header .desktopNav a:after, header .mobileNav a:after {
   width: 100%;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  background: #e00025;
+  background: #00e0bb;
 }
 
 header .desktopNav a:hover::After, header .mobileNav a:hover::After {

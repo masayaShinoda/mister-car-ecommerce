@@ -21,6 +21,7 @@ const Products = () => {
                 product {
                   id
                   name
+                  images
                 }
               }
             }
@@ -39,9 +40,11 @@ const Products = () => {
           products[product.id].prices.push(price)
         }
         return (
-          <div className="productContainer">
+          <div className="productsContainer">
             {Object.keys(products).map(key => (
-              <ProductCard key={products[key].id} product={products[key]} />
+              <>
+                <ProductCard key={products[key].id} product={products[key]} />
+              </>
             ))}
           </div>
         )
