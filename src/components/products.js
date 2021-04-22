@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import ProductCard from "./ProductCard"
+import ProductCard from "./productCard"
 import "../styles/products.css"
 
 const Products = () => {
