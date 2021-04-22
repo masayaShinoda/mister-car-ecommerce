@@ -13,7 +13,7 @@ import "../styles/storeStyles.css"
 let stripePromise
 const getStripe = () => {
   if (!stripePromise) {
-    stripePromise = loadStripe("pk_test_51HUq0ECBrZ9mAUEofSz1rNu8U849cNg3HP2vnO3xwLDZhfUaLN4W2gtUUTLKO7pu70ycd89Q2st2UUVa3FNQUjv300xQh3qtrS")
+    stripePromise = loadStripe("pk_live_51HUq0ECBrZ9mAUEook2NFiIVzl70Hm1kTOdVRvd2onlKeX3jV4ASflaHg4kmYQduh7X9mBmuk7ZPqX9E93DKQCRR00C0Bb7Bon")
   }
   return stripePromise
 }
