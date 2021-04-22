@@ -4,7 +4,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Mister Car Accessories`,
-    description: `Car accessories available internationally.`,
+    description: `Car accessories available for order internationally.`,
     author: `Masaya Shida`,
   },
   plugins: [
