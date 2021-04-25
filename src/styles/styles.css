@@ -53,7 +53,7 @@ main {
 
 @media (max-width: 480px) {
   main {
-    padding: 0 5vw;
+    padding: 5vh 5vw;
   }
 }
 
