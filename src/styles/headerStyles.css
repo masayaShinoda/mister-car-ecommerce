@@ -70,9 +70,9 @@ header .mobileNav {
 
 @media (max-width: 480px) {
   header {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -81,6 +81,9 @@ header .mobileNav {
         -ms-flex-align: center;
             align-items: center;
     padding: 2.5vh 5vw;
+  }
+  header .logo {
+    margin-right: 7.5vw;
   }
   header .desktopNav {
     display: none;

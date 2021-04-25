@@ -52,10 +52,12 @@ header {
 //mobile nav
 @media (max-width: $mobile-bp) {
     header {
-        justify-content: flex-end;
+        // justify-content: flex-end;
+        justify-content: space-between;
         flex-direction: row-reverse;
         align-items: center;
         padding: 2.5vh 5vw;
+        .logo {margin-right: 7.5vw;}
         .desktopNav {display: none;}
         .mobileNav {
             display: none;

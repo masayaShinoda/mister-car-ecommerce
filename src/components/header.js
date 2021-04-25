@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome,faInfoCircle,faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faHome,faInfoCircle,faStore } from '@fortawesome/free-solid-svg-icons'
 
 import "../styles/styles.css"
 import "../styles/headerStyles.css"
@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Link href="/store">
         <FontAwesomeIcon 
-          icon={faShoppingCart}
+          icon={faStore}
           style={{fontSize: `1.8rem`, maxWidth: `1.8rem`, marginRight: `.8rem`, lineHeight: 0}}
         />      
         Store
@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => (
     <nav class="mobileNav" id="nav">
       <Link href="/store">
         <FontAwesomeIcon 
-          icon={faShoppingCart}
+          icon={faStore}
           style={{fontSize: `1.8rem`, maxWidth: `1.8rem`, marginRight: `.8rem`, lineHeight: 0}}
         />      
         Store

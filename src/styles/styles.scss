@@ -7,8 +7,8 @@ html {font-size: 62.5%; scroll-behavior: smoooth;}
     box-sizing: border-box;    
 }
 h1,h2,h3,a {font-family: $head; line-height: 1.6;}
-h1 {font-weight: 800; font-size: 4.2rem; margin-bottom: 1.1rem}
-h2, h3 {font-weight: 600; margin-bottom: .8rem;}
+h1 {font-weight: 800; font-size: 4.2rem; margin-bottom: 1.45rem}
+h2, h3 {font-weight: 600; margin-bottom: 1.1rem;}
 h2 {font-size: 2.8rem;}
 h3 {font-size: 2.1rem;}
 a {font-weight: 600;}
@@ -16,7 +16,7 @@ p {
     font-size: 1.8rem;
     font-weight: 400; 
     font-family: $body;
-    line-height: 1.6
+    line-height: 1.6;
 }
 main {
     padding: 10vh 10vw;
