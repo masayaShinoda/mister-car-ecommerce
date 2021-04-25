@@ -46,16 +46,15 @@ const ProductCard = ({ product }) => {
             <h2 className="productName">{product.name}</h2>
           </legend>
           <label>
-            <span className="priceSelectContainer">
-              <p>Price{" "}</p>
-              <select name="priceSelect">
+            {/* <span className="priceSelectContainer"> */}
+              {/* <select name="priceSelect"> */}
                 {product.prices.map(price => (
-                  <option key={price.id} value={price.id}>
+                  <p className="productPrice" key={price.id} value={price.id}>
                     {formatPrice(price.unit_amount, price.currency)}
-                  </option>
+                  </p>
                 ))}
-              </select>
-            </span>
+              {/* </select> */}
+            {/* </span> */}
           </label>
         </fieldset>
         <button
