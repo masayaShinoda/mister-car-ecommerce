@@ -53,7 +53,7 @@
 }
 .buyBtn {background: $primary-clr;}
 .buyBtn:hover {background: lighten($primary-clr, 5%)}
-.disabledBuyBtn {background: #535353}
+.disabledBuyBtn {background: #535353; cursor: not-allowed;}
 
 .LazyLoad {min-width: 20vw; min-height: 10vw;}
 .productImg {
