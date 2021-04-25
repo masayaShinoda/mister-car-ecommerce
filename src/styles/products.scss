@@ -9,7 +9,7 @@
 .productCard {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    // justify-content: space-around;
     align-items: flex-start;
     padding: 1.5rem;
     margin-bottom: 4.25vh;
@@ -34,6 +34,7 @@
     font-size: 2.7rem;
     margin: 1.1rem 0;
     line-height: 1;
+    max-width: 20vw;
     // margin: 1.1rem 0;
 }
 .disabledBuyBtn, .buyBtn {
@@ -80,6 +81,8 @@
         min-height: 32.5vw;
         max-height: 32.5vw;
     }
+    .productName {max-width: 32.5vw;}
+
 }
 @media(max-width: $mobile-bp) {
     .productCard {
@@ -97,6 +100,7 @@
         max-width: 80vw;
         // margin: 0 auto;
     }
+    .productName {max-width: 80vw;}
 }
 
 
