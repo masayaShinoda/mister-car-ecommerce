@@ -4,6 +4,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 6px;
@@ -97,14 +100,20 @@
 }
 
 @media (max-width: 1023px) {
+  .productsContainer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .productCard {
     max-width: 40vw;
+    margin: 2.5vh 0;
   }
   .productCard:nth-of-type(1n) {
     margin-right: 0;
   }
   .productCard:nth-of-type(2n) {
-    margin-left: 5vw;
+    margin-left: 0;
   }
   .productImg {
     min-width: 32.5vw;
