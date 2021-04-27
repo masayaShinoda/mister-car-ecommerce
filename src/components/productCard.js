@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 import getStripe from "../utils/stripejs"
 import LazyLoad from 'react-lazy-load';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -42,7 +43,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="productCard">
       {/* <form onSubmit={handleSubmit}> */}
-        <fieldset style={{ border: "none" }}>
+        <Link className="productLink" href={"/product/" + product.id} style={{ textDecoration: "none" }}>
           <legend>
             <LazyLoad>
               <img className="productImg" src={product.images} alt={product.name}/>
@@ -60,7 +61,7 @@ const ProductCard = ({ product }) => {
               {/* </select> */}
             {/* </span> */}
           </label>
-        </fieldset>
+        </Link>
         {/* <button
           disabled={loading}
           className={

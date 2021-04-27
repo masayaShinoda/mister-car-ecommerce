@@ -12,6 +12,10 @@
   border-radius: 6px;
 }
 
+.productLink {
+  color: #212121;
+}
+
 .productCard {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -8,36 +8,34 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //1. Get path to template
   const productTemplate = path.resolve("./src/templates/productPage.js")
   const res = await graphql(`
-      query ProductPrices {
-        prices: allStripePrice(
-          filter: { active: { eq: true } }
-          sort: { fields: [unit_amount] }
-        ) {
-          edges {
-            node {
-              id
-              active
-              currency
-              unit_amount
-              product {
-                id
-                name
-                images
-              }
-            }
+    query data {
+      allStripePrice {
+        nodes {
+          id
+          currency
+          unit_amount
+          unit_amount_decimal
+          active
+          product {
+            name
+            description
+            images
+            id
           }
         }
       }
-    `)
+    }
+  `)
 
   //2. Get product data
-  res.data.edges.forEach(node => {
+  res.data.allStripePrice.nodes.forEach(node => {
+    console.log(productTemplate.JSON);
     createPage({
       //3. Create new pages
       component: productTemplate,
-      path: `/product/${node.id}`, //dynamic based off of slug each post has
+      path: `/product/${node.product.id}`, //dynamic based off of slug each post has
       context: {
-        slug: node.id,
+        slug: node.product.id,
         //passed down as context
         currentProductData: node,
       },
