@@ -39,7 +39,15 @@ module.exports = {
         secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: false,
      },
-    }
+    },
+    {
+			resolve: 'gatsby-plugin-snipcart',
+			options: {
+				apiKey: process.env.GATSBY_SNIPCART_APIKEY,
+        autopop: true
+			}
+		}
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

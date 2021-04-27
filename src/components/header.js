@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome,faInfoCircle,faStore } from '@fortawesome/free-solid-svg-icons'
+import { faHome,faInfoCircle,faStore,faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 import "../styles/styles.css"
 import "../styles/headerStyles.css"
@@ -47,6 +47,13 @@ const Header = ({ siteTitle }) => (
         />
         About
       </Link>
+      <a class="snipcart-checkout" style={{cursor: `pointer`}}>
+        <FontAwesomeIcon 
+          icon={faShoppingCart}
+          style={{fontSize: `1.8rem`, maxWidth: `1.8rem`, marginRight: `.8rem`, lineHeight: 0}}
+        />
+        Cart
+      </a>
     </nav>
     
     <button id="openNavBtn" onClick={openNav} className="openNavBtn">
