@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import BackButton from "../components/backBtn"
-import "./ProductPage.module.css"
+import "./ProductPage.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 
@@ -20,31 +20,23 @@ const ProductPage = ({ pageContext }) => {
 
   return (
     <Layout>
-      <p>
-        {currentProductData.id}
-      </p>
-      {/* <div className="productPageContainer">
+      <div className="productPageContainer">
         <div className="upperDiv">
-          <BackButton destination="/" />
+          <BackButton destination="/store" />
         </div>
-        <div className="gallery">
-          <img className="productImg" src={currentProductData.product.images[0]} alt={currentProductData.product.name}/>
-        </div>
-        <div className="productDetails">
-          <h1>{currentProductData.product.name}</h1>
-            <h2>
-              {formatPrice(currentProductData.unit_amount, currentProductData.currency)}
-            </h2>
-          <span
-            style={{
-              display: `inline-flex`,
-              alignItems: `center`,
-              width: `100%`,
-              justifyContent: `space-between`,
-            }}
-          >
+          <div className="gallery">
+            <img src={currentProductData.product.images[0]} alt={currentProductData.product.name}/>
+          </div>
+          <div className="productDetails">
+            <h1>{currentProductData.product.name}</h1>
+              <p>
+                {currentProductData.product.description}
+              </p>
+              <h2 style={{marginTop: `1.1rem`}}>
+                {formatPrice(currentProductData.unit_amount, currentProductData.currency)}
+              </h2>
               <a
-                style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, cursor: `pointer` }}
+                style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, cursor: `pointer`, maxWidth: `max-content` }}
                 className={"snipcart-add-item" + " buyBtn"}
                 data-item-id={currentProductData.id}
                 data-item-price={((currentProductData.unit_amount/100).toFixed(2))}
@@ -59,9 +51,8 @@ const ProductPage = ({ pageContext }) => {
                 />
                 Add to Cart
               </a>
-          </span>
-        </div>
-      </div> */}
+          </div>
+      </div>
     </Layout>
   )
 }

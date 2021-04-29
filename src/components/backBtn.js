@@ -7,7 +7,7 @@ const BackButton = props => {
   return (
     <Link
       to={props.destination}
-      style={{ display: `flex`, alignItems: `center`, fontSize: `2.5rem` }}
+      style={{ display: `flex`, alignItems: `center`, fontSize: `2.5rem`, textDecoration: `none` }}
     >
       <FontAwesomeIcon
         size="xs"

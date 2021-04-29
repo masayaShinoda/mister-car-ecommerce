@@ -11,13 +11,19 @@
   padding-bottom: 5vh;
   // border: 1px solid red; //debug
   .upperDiv {
-    // border: 1px solid blue; //debug
     grid-area: 1 / 1 / 2 / 3;
+    max-width: fit-content;
+    // border: 1px solid blue; //debug
   }
   .productDetails {
     // text-align: right;
     grid-area: 2 / 2 / 3 / 3;
     padding: 2.5vmax 2.5vmax;
+    display: flex;
+    flex-direction: column;    
+    h1 {
+      font-size: 3.2rem;
+    }
     // margin-right: 5vmax;
     // border: 1px solid green; //debug
   }
@@ -36,6 +42,7 @@
 @media (max-width: $tablet-bp) {
   .productPageContainer {
     .gallery {
+      padding: 2.5vmax 0;
       max-width: 40vmax;
       max-height: 40vmax;
     }
@@ -48,7 +55,7 @@
     justify-content: flex-start;
     .productDetails {
       // text-align: right;
-      padding: 2.5vmax 0;
+      padding: 2.5vmin 0;
 
       // border: 1px solid green; //debug
     }
@@ -57,6 +64,8 @@
       flex-direction: row;
       max-width: 90vw;
       max-height: 90vw;
+      padding: 0;
+
       /* Hide scrollbar for IE, Edge and Firefox */
       // -ms-overflow-style: none; /* IE and Edge */
       // scrollbar-width: none; /* Firefox */
