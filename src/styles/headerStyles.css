@@ -160,7 +160,6 @@ header .mobileNav {
     background: #212121;
     top: 12.5vh;
     left: 5vw;
-    border: 1px solid red;
   }
   header .mobileNav a {
     -webkit-box-pack: start;
