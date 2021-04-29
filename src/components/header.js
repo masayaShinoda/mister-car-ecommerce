@@ -82,6 +82,13 @@ const Header = ({ siteTitle }) => (
         />
         About
       </Link>
+      <a class="snipcart-checkout" style={{cursor: `pointer`}}>
+        <FontAwesomeIcon 
+          icon={faShoppingCart}
+          style={{fontSize: `1.8rem`, maxWidth: `1.8rem`, marginRight: `.8rem`, lineHeight: 0}}
+        />
+        Cart
+      </a>
     </nav>
   </header>
 )
