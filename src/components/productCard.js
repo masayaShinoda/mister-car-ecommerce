@@ -78,7 +78,7 @@ const ProductCard = ({ product }) => {
                 data-item-price={((product.prices[0].unit_amount/100).toFixed(2))}
                 data-item-image={product.images}
                 data-item-name={product.name}
-                data-item-url={`/`}
+                data-item-url={`/store/${product.id}`}
               >
                 <FontAwesomeIcon
                   size="xs"
