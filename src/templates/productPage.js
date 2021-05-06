@@ -34,16 +34,19 @@ const ProductPage = ({ pageContext }) => {
               </p>
               <h2 style={{marginTop: `1.1rem`}}>
                 {formatPrice(currentProductData.unit_amount, currentProductData.currency)}
-              </h2>
+              </h2>              
               <a
                 style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, cursor: `pointer`, maxWidth: `max-content` }}
                 className={"snipcart-add-item" + " buyBtn"}
-                data-item-id={currentProductData.id}
-                data-item-price={((currentProductData.unit_amount/100).toFixed(2))}
+                data-item-id={currentProductData.product.id}
+                data-item-price={((currentProductData.unit_amount/100))}
+                // data-item-price={currentProductData.unit_amount}
                 data-item-image={currentProductData.product.images}
                 data-item-name={currentProductData.product.name}
                 data-item-url={`/product/${currentProductData.product.id}`}
               >
+                {/* {console.log(typeof ((currentProductData.unit_amount/100)))} */}
+                {console.log((currentProductData.unit_amount/100))}
                 <FontAwesomeIcon
                   size="xs"
                   icon={faShoppingCart}
