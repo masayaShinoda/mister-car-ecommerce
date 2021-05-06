@@ -42,7 +42,7 @@ const ProductPage = ({ pageContext }) => {
                 data-item-price={((currentProductData.unit_amount/100).toFixed(2))}
                 data-item-image={currentProductData.product.images}
                 data-item-name={currentProductData.product.name}
-                data-item-url={`/store/${currentProductData.product.id}`}
+                data-item-url={`/product/${currentProductData.product.id}`}
               >
                 <FontAwesomeIcon
                   size="xs"

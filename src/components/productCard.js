@@ -4,7 +4,7 @@ import getStripe from "../utils/stripejs"
 import LazyLoad from 'react-lazy-load';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
+import { faShoppingCart, faShoppingBag } from "@fortawesome/free-solid-svg-icons"
 
 import "../styles/products.css"
 
@@ -72,20 +72,22 @@ const ProductCard = ({ product }) => {
           Buy
         </button> */}
               <a
-                style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, cursor: `pointer` }}
-                className={"snipcart-add-item" + " buyBtn"}
-                data-item-id={product.prices[0].id}
-                data-item-price={((product.prices[0].unit_amount/100).toFixed(2))}
-                data-item-image={product.images}
-                data-item-name={product.name}
-                data-item-url={`/store/${product.id}`}
+                style={{ display: `flex`, alignItems: `center`, justifyContent: `center`, cursor: `pointer`, textDecoration: `none` }}
+                // className={"snipcart-add-item" + " buyBtn"}
+                className="buyBtn"
+                href={`/product/${product.id}`}
+                // data-item-id={product.prices[0].id}
+                // data-item-price={((product.prices[0].unit_amount/100).toFixed(2))}
+                // data-item-image={product.images}
+                // data-item-name={product.name}
+                // data-item-url={`/store/${product.id}`}
               >
                 <FontAwesomeIcon
                   size="xs"
-                  icon={faShoppingCart}
+                  icon={faShoppingBag}
                   style={{ marginRight: `.5rem`, maxWidth: `2.5rem` }}
                 />
-                Add to Cart
+                View Product
               </a>
       {/* </form> */}
     </div>
